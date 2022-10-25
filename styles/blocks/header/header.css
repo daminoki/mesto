@@ -1,0 +1,35 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.header::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background-color: rgba(84, 84, 84, 0.7);
+    left: 50%;
+    bottom: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    right: 50%;
+    width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .header::after {
+        left: 0;
+        width: 100%;  
+        right: unset;
+        max-width: initial;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
