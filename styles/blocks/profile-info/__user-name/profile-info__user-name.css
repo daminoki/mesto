@@ -1,0 +1,13 @@
+.profile-info__user-name {
+    color: var(--contrast-text-color);
+    font-size: 27px;
+    line-height: 33px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-info__user-name {
+        font-size: 42px;
+        line-height: 48px;
+    }
+}

@@ -1,0 +1,14 @@
+.profile-info__content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 14px;
+    gap: 10px;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-info__content-wrapper {
+        gap: 18px;
+        align-items: end;
+    }
+}
