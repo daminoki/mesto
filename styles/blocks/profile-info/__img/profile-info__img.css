@@ -6,5 +6,6 @@
 @media screen and (min-width: 768px) {
     .profile-info__img {
         max-width: 120px;
+        margin-bottom: 0;
     }
 }

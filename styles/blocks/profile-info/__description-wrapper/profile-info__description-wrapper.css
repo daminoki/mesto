@@ -8,5 +8,6 @@
     .profile-info__description-wrapper {
         display: flex;
         align-items: flex-start;
+        gap: 16px;
     }
 }

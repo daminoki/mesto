@@ -9,5 +9,6 @@
     .profile-info__user-description {
         font-size: 18px;
         line-height: 22px;
+        margin-bottom: 0;
     }
 }
