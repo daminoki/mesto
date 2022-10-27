@@ -10,5 +10,6 @@
     .profile-info__content-wrapper {
         gap: 18px;
         align-items: end;
+        margin-bottom: 0;
     }
 }
