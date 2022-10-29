@@ -7,3 +7,12 @@
     color: var(--contrast-text-color);
     padding: 14px 125px 18px;
 }
+
+@media screen and (max-width: 767px) {
+    .popup__save-button {
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        margin: 0 22px 25px;
+    }
+}
