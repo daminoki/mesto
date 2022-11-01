@@ -20,6 +20,11 @@ function closeEditForm () {
 }
 
 closeButton.addEventListener('click', closeEditForm);
+window.addEventListener('keyup', function (evt) {
+    if (evt.key === 'Escape' && popup.classList.contains("popup_opened")) {
+        closeEditForm(); 
+    }
+});
 
 // Находим форму в DOM
 let formElement = document.querySelector('.popup__form');
