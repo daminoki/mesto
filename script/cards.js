@@ -42,3 +42,37 @@ initialCards.forEach(function (item) {
         </div>
     `)
 });
+
+const addButton = document.querySelector('.profile-info__add-button');
+const cardPopup = document.querySelector('.card-popup');
+const cardTitleInput = cardPopup.querySelector('.popup__input_name');
+const cardImageLinkInput = cardPopup.querySelector('.popup__input_about');
+
+function openAddForm() {
+    console.log(cardPopup);
+    cardPopup.classList.add('popup_opened');
+}
+
+addButton.addEventListener('click', openAddForm);
+
+const closeAddButton = cardPopup.querySelector('.popup__close-button');
+
+function closeAddForm () {
+    cardPopup.classList.remove('popup_opened');
+}
+
+closeAddButton.addEventListener('click', closeAddForm);
+window.addEventListener('keyup', function (evt) {
+    if (evt.key === 'Escape' && cardPopup.classList.contains("popup_opened")) {
+        closeAddForm(); 
+    }
+});
+
+let addFormElement = cardPopup.querySelector('.popup__form');
+
+function formSubmitHandler (evt) {
+    evt.preventDefault(); 
+    closeAddForm();
+}
+
+addFormElement.addEventListener('submit', formSubmitHandler); 
