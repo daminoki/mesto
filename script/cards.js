@@ -28,7 +28,6 @@ const initialCards = [
 const cardsContainer = document.querySelector('.cards');
 
 const cardItem = (name, imgSrc) => {
-  console.log(imgSrc);
   return `
     <div class="cards__item">
       <img class="cards__img" src="${imgSrc}" alt="">
@@ -36,6 +35,7 @@ const cardItem = (name, imgSrc) => {
         <h3 class="cards__name">${name}</h3>
         <button class="cards__like"></button>
       </div>
+      <button class="cards__trash"></button>
     </div>
   `;
 };
@@ -46,10 +46,17 @@ initialCards.forEach(function (item) {
 
 const initCardsListener = () => {
   const likeButtonArr = document.querySelectorAll('.cards__like');
+  const deleteButtonArr = document.querySelectorAll('.cards__trash');
 
   likeButtonArr.forEach(function (el) {
     el.addEventListener('click', () => {
       likeAdd(el);
+    });
+  });
+
+  deleteButtonArr.forEach(function (el) {
+    el.addEventListener('click', () => {
+      deleteCard(el);
     });
   });
 }
@@ -97,3 +104,11 @@ addFormElement.addEventListener('submit', formSubmitHandler);
 function likeAdd (el) {
   el.classList.toggle('cards__like_active');
 };
+
+
+// удаление картинки
+
+function deleteCard (el) {
+  const cardItem = el.closest('.cards__item');
+  cardItem.remove();
+}
