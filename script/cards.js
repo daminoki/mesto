@@ -40,28 +40,19 @@ const cardItem = (name, imgSrc) => {
   `;
 };
 
+cardsContainer.addEventListener('click', function (evt) {
+  if (evt.target.classList.contains('cards__like')) {
+    likeAdd(evt.target);
+  };
+
+  if(evt.target.classList.contains('cards__trash')) {
+    deleteCard(evt.target);
+  }
+});
+
 initialCards.forEach(function (item) {
     cardsContainer.insertAdjacentHTML('beforeend', cardItem(item.name, item.path))
 });
-
-const initCardsListener = () => {
-  const likeButtonArr = document.querySelectorAll('.cards__like');
-  const deleteButtonArr = document.querySelectorAll('.cards__trash');
-
-  likeButtonArr.forEach(function (el) {
-    el.addEventListener('click', () => {
-      likeAdd(el);
-    });
-  });
-
-  deleteButtonArr.forEach(function (el) {
-    el.addEventListener('click', () => {
-      deleteCard(el);
-    });
-  });
-}
-
-initCardsListener();
 
 const addButton = document.querySelector('.profile-info__add-button');
 const cardPopup = document.querySelector('.card-popup');
@@ -94,8 +85,7 @@ let addFormElement = cardPopup.querySelector('.popup__form');
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
-    cardsContainer.insertAdjacentHTML('afterbegin', cardItem(cardTitleInput.value, cardImageLinkInput.value)); 
-    initCardsListener();
+    cardsContainer.insertAdjacentHTML('afterbegin', cardItem(cardTitleInput.value, cardImageLinkInput.value));
     closeAddForm();
 }
 
@@ -104,9 +94,6 @@ addFormElement.addEventListener('submit', formSubmitHandler);
 function likeAdd (el) {
   el.classList.toggle('cards__like_active');
 };
-
-
-// удаление картинки
 
 function deleteCard (el) {
   const cardItem = el.closest('.cards__item');
