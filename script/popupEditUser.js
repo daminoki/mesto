@@ -1,3 +1,5 @@
+import { openPopup, closePopup } from './popup.js';
+
 const editButton = document.querySelector('.profile-info__edit-button');
 const popup = document.querySelector('.popup');
 const userName = document.querySelector('.profile-info__user-name');
@@ -6,37 +8,24 @@ const userDescription = document.querySelector('.profile-info__user-description'
 const userDescriptionInput = popup.querySelector('.popup__input_about');
 
 function openEditForm() {
-    popup.classList.add('popup_opened');
+    openPopup(popup);
     userNameInput.value = userName.textContent;
     userDescriptionInput.value = userDescription.textContent;
 }
 
-editButton.addEventListener('click', openEditForm);
+editButton.addEventListener('click', () => openEditForm());
 
 const closeButton = document.querySelector('.popup__close-button');
 
-function closeEditForm () {
-    popup.classList.remove('popup_opened');
-}
-
-closeButton.addEventListener('click', closeEditForm);
-window.addEventListener('keyup', function (evt) {
-    if (evt.key === 'Escape' && popup.classList.contains("popup_opened")) {
-        closeEditForm(); 
-    }
-});
-
+closeButton.addEventListener('click', () => closePopup(popup));
 
 let formElement = document.querySelector('.popup__form');
 
-
 function formSubmitHandler (evt) {
     evt.preventDefault(); 
-
     userName.textContent = userNameInput.value;
     userDescription.textContent = userDescriptionInput.value;
-    closeEditForm();
+    closePopup(popup);
 }
 
-
-formElement.addEventListener('submit', formSubmitHandler); 
+formElement.addEventListener('submit', (evt) => formSubmitHandler(evt)); 
