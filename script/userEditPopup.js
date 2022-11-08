@@ -1,8 +1,8 @@
 const editButton = document.querySelector('.profile-info__edit-button');
 const popup = document.querySelector('.popup');
-const userName = popup.querySelector('.profile-info__user-name');
+const userName = document.querySelector('.profile-info__user-name');
 const userNameInput = popup.querySelector('.popup__input_name');
-const userDescription = popup.querySelector('.profile-info__user-description');
+const userDescription = document.querySelector('.profile-info__user-description');
 const userDescriptionInput = popup.querySelector('.popup__input_about');
 
 function openEditForm() {
