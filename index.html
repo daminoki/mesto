@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +11,21 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Mesto</title>
 </head>
+
 <body>
     <div class="container">
         <header class="header">
             <img class="header__logo" src="./images/icons/logo.svg" alt="logo">
-        </header> 
-        
+        </header>
+
         <section class="profile-info">
             <div class="profile-info__wrapper">
                 <img class="profile-info__img" src="./images/img/avatar.jpg" alt="avatar">
                 <div class="profile-info__description-wrapper">
                     <div class="profile-info__content-wrapper">
                         <h3 class="profile-info__user-name">Жак-Ив Кусто</h3>
-                        <button class="profile-info__edit-button"><img src="./images/icons/edit.svg" alt="edit-button"></button>
+                        <button class="profile-info__edit-button"><img src="./images/icons/edit.svg"
+                                alt="edit-button"></button>
                     </div>
                     <p class="profile-info__user-description">Исследователь океана</p>
                 </div>
@@ -42,13 +45,17 @@
         <div class="popup__container">
             <form class="popup__form" name="popupForm">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <input class="popup__input popup__input_name" type="text" name="userName" id="userName-input" placeholder="Имя" required>
-                <input class="popup__input popup__input_about" type="text" name="userAbout" placeholder="Профессия" required>
+                <input class="popup__input popup__input_name" type="text" name="userName" id="userName-input"
+                    placeholder="Имя" required>
+                <input class="popup__input popup__input_about" type="text" name="userAbout" placeholder="Профессия"
+                    required>
                 <button class="popup__save-button">Сохранить</button>
             </form>
             <button class="popup__close-button">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z" fill="white"/>
+                    <path
+                        d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                        fill="white" />
                 </svg>
             </button>
         </div>
@@ -58,18 +65,70 @@
         <div class="popup__container">
             <form class="popup__form" name="popupForm">
                 <h2 class="popup__title">Новое место</h2>
-                <input class="popup__input popup__input_name" type="text" name="userName" id="userName-input" placeholder="Название" required>
-                <input class="popup__input popup__input_about" type="text" name="userAbout" placeholder="Ссылка на картинку" required>
+                <input class="popup__input popup__input_name" type="text" name="userName" id="userName-input"
+                    placeholder="Название" required>
+                <input class="popup__input popup__input_about" type="text" name="userAbout"
+                    placeholder="Ссылка на картинку" required>
                 <button class="popup__save-button">Создать</button>
             </form>
             <button class="popup__close-button">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z" fill="white"/>
+                    <path
+                        d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                        fill="white" />
                 </svg>
             </button>
         </div>
     </div>
-    <script src='./script/userEditPopup.js'></script>
-    <script src='./script/cards.js'></script>
+
+    <div class="card-img-popup">
+        <div class="card-img-popup__container">
+            <img class="card-img-popup__img" src="" alt="image">
+            <h2 class="card-img-popup__title">
+                </h3>
+                <button class="card-img-popup__close-button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                            fill="white" />
+                    </svg>
+                </button>
+        </div>
+    </div>
+
+    <script src="/script/main.js" type="module"></script>
 </body>
+
 </html>
+
+<!--
+    TODO
+
+    JS код ставновится все более сложным с увеличением дублирований одного и того же
+    С этой целью нужно провести рефакторинг
+
+    0) Запускать код на локальном сервере, через плагин VS Code
+
+    1) Разбить на отдельные файлы те фрагменты кода, которые никак не пересекаются
+    и являются отдельными по смыслу модулями
+
+    2) Модули должы иметь разную область видимости, чтобы одинаковые названия переменных и функций не конфликтовали
+
+    3) К странице в HTML должен подключаться один js файл
+
+    4) Код с пересекающейся логикой объединить в один файл и убрать в нем дублирования,
+    используя универсальные методы
+
+    например, вместо openAddForm(), openCardImgPopup() и openEditForm() создать один метод openPopup(),
+    который в качестве аргумента будет принимать элемент того попапа, который нужно открыть
+
+    function openPopup(popupEl) {
+        popupEl.classList.add('popup-opened');
+    }
+
+    сделать подобный метод closePopup();
+
+    делегировать все слушатели для карточек, как это уже сделано в cards.js для лайков и удаления,
+    т.е. добавить туда к лайкам и удалению возможность кликать на картинку карточек,
+    чтобы открывать попап карточки
+ -->
