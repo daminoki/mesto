@@ -1,12 +1,14 @@
 import { openPopup, closePopup } from './popup.js';
 
 const popup = document.querySelector('.card-img-popup');
-const cardImg = document.querySelector('.cards__img');
-const cardName = document.querySelector('.cards__name');
+const cardImgOpen = popup.querySelector('.card-img-popup__img');
+const cardTitle = popup.querySelector('.card-img-popup__title');
 
-export function openCardShowPopup () {
+export function openCardShowPopup (img) {
+    const cardItem = img.closest('.cards__item');
+    const cardName = cardItem.querySelector('.cards__name');
     openPopup(popup);
-    cardImgOpen.src = cardImg.src;
+    cardImgOpen.src = img.src;
     cardTitle.textContent = cardName.textContent;
 };
 

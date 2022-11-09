@@ -14,7 +14,7 @@ cardsContainer.addEventListener('click', function (evt) {
   }
 
   if (evt.target.classList.contains('cards__img')) {
-    openCardShowPopup();
+    openCardShowPopup(evt.target);
   }
 });
 
