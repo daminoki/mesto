@@ -1,3 +1,13 @@
 .card-img-popup__title {
     color: #FFF;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+    .card-img-popup__title {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }

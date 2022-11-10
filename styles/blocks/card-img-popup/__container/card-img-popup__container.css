@@ -1,1 +1,6 @@
-
+.card-img-popup__container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}

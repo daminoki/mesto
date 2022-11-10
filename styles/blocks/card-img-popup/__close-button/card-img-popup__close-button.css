@@ -1,0 +1,19 @@
+.card-img-popup__close-button {
+    display: flex;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-img-popup__close-button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .card-img-popup__close-button {
+        width: 20px;
+        right: 0;
+    }
+}
