@@ -43,12 +43,14 @@
 
     <div class="popup">
         <div class="popup__container">
-            <form class="popup__form" name="popupForm">
+            <form class="popup__form" name="popupForm"  novalidate>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <input class="popup__input popup__input_name" type="text" name="userName" id="userName-input"
-                    placeholder="Имя" required>
-                <input class="popup__input popup__input_about" type="text" name="userAbout" placeholder="Профессия"
-                    required>
+                    placeholder="Имя" required minlength="2" maxlength="40">
+                <span class="userName-input-error"></span>
+                <input class="popup__input popup__input_about" type="text" name="userAbout" id="userAbout-input" placeholder="Профессия"
+                    required minlength="2" maxlength="200">
+                <span class="userAbout-input-error"></span>
                 <button class="popup__save-button">Сохранить</button>
             </form>
             <button class="popup__close-button">
