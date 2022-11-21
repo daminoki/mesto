@@ -1,5 +1,6 @@
-.popup__input_error-message-active {
+.popup__input_error-message_active {
     color: red;
     font-size: 12px;
     line-height: 15px;
+    padding-top: 5px;
 }

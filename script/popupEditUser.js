@@ -22,7 +22,7 @@ closeButton.addEventListener('click', () => closePopup(popup));
 let formElement = document.querySelector('.popup__form');
 
 function formSubmitHandler (evt) {
-    evt.preventDefault(); 
+    evt.preventDefault();
     userName.textContent = userNameInput.value;
     userDescription.textContent = userDescriptionInput.value;
     closePopup(popup);
