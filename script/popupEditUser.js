@@ -32,4 +32,4 @@ function formSubmitHandler (evt) {
     closePopup(popup);
 }
 
-formElement.addEventListener('submit', (evt) => formSubmitHandler(evt)); 
+formElement.addEventListener('submit', (evt) => formSubmitHandler(evt));
