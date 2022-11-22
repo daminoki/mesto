@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+
     <title>Mesto</title>
 </head>
 
@@ -69,12 +70,18 @@
 
     <div class="card-popup">
         <div class="popup__container">
-            <form class="popup__form" name="popupForm">
+            <form class="popup__form" name="popupForm" novalidate>
                 <h2 class="popup__title">Новое место</h2>
-                <input class="popup__input popup__input_name" type="text" name="userName" id="userName-input"
-                    placeholder="Название" required>
-                <input class="popup__input popup__input_about" type="text" name="userAbout"
+                <div class="popup__input-wrapper">
+                    <input class="popup__input popup__input_name" type="text" name="userName" id="placeName-input"
+                    placeholder="Название" minlength="2" maxlength="30" required>
+                    <span class="placeName-input-error"></span>
+                </div>
+                <div class="popup__input-wrapper">
+                    <input class="popup__input popup__input_about" type="url" name="userAbout" id="placeLink-input"
                     placeholder="Ссылка на картинку" required>
+                    <span class="placeLink-input-error"></span>
+                </div>
                 <button class="popup__save-button">Создать</button>
             </form>
             <button class="popup__close-button">
@@ -104,5 +111,4 @@
 
     <script src="./script/main.js" type="module"></script>
 </body>
-
 </html>

@@ -1,4 +1,4 @@
-import "./editUserValidationForm.js";
+import "./validationForm.js";
 import "./initialCards.js";
 import "./initListeners.js";
 import "./popupEditUser.js";
