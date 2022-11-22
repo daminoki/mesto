@@ -29,8 +29,10 @@ const hasInvalidInput = (inputList) => {
 const toggleButtonState = (inputList, buttonElement) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add("popup__save-button_inactive");
+        buttonElement.disabled = true;
     } else {
         buttonElement.classList.remove("popup__save-button_inactive");
+        buttonElement.disabled = false;
     }
 };
 
@@ -52,9 +54,6 @@ const enableValidation = () => {
     const formList = Array.from(document.querySelectorAll(".popup__form"));
 
     formList.forEach((formElement) => {
-        formElement.addEventListener("submit", (evt) => {
-            evt.preventDefault();
-        });
         setEventListeners(formElement);
     });
 };
