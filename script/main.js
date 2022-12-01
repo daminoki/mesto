@@ -5,3 +5,4 @@ import "./popupEditUser.js";
 import "./popupAddCard.js";
 import "./popupCardShow.js";
 import "./Card.js";
+import "./FormValidator.js";

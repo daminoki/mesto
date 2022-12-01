@@ -27,19 +27,20 @@ const cardList = [
       path: './images/img/kazan.jpg'
     }
 ];
-class Card {
-    constructor(data, selector) {
-        this._name = data.name;
-        this._path = data.path;
-        this._selector = selector;
+
+export default class Card {
+    constructor(name, path) {
+        this._name = name;
+        this._path = path;
+        this._element = null;
     }
 
     _getElement() {
         const cardElement = document
-        .querySelector('.cards')
-        .content
-        .querySelector('.cards__item')
-        .cloneNode(true);
+          .querySelector('.card-template')
+          .content
+          .querySelector('.cards__item')
+          .cloneNode(true);
 
         return cardElement;
     }
@@ -55,20 +56,18 @@ class Card {
     }
 
     _setEventListeners() {
-      //открытие попапа с изображением
       this._element.querySelector('.cards__img').addEventListener('click', () => {
         this._handleImgClick();
       });
 
-      //закрытие попапа с изображением
       this._handleCardClose();
 
-      //лайк
-      this._element.querySelector('.cards__like').addEventListener('click', () => {
-        this._handleLikeClick();
+      this._element.addEventListener('click', (evt) => {
+        if(evt.target.classList.contains('cards__like')) {
+          this._handleLikeClick(evt.target);
+        }
       })
 
-      //удаление карточки
       this._element.querySelector('.cards__trash').addEventListener('click', () => {
         this._handleRemoveCard();
       })
@@ -96,7 +95,7 @@ class Card {
 }
 
 cardList.forEach((item) => {
-    const card = new Card(item, '.cards');
+    const card = new Card(item.name, item.path);
     const cardElement = card.generateCard();
 
     cardsContainer.append(cardElement);
