@@ -1,32 +1,4 @@
-const cardsContainer = document.querySelector('.cards');
-const cardImgPopup = document.querySelector('.card-img-popup');
-
-const cardList = [
-    {
-      name: 'Колумбия',
-      path: './images/img/flowers.jpg'
-    },
-    {
-      name: 'Арканзас',
-      path: './images/img/forest.jpg'
-    },
-    {
-      name: 'Кабардино-Балкария',
-      path: './images/img/sea.jpg'
-    },
-    {
-      name: 'Турция',
-      path: './images/img/cat.jpg'
-    },
-    {
-      name: 'Швейцария',
-      path: './images/img/switzerland.jpg'
-    },
-    {
-      name: 'Казань',
-      path: './images/img/kazan.jpg'
-    }
-];
+import { cardImgPopup } from '../utils/constants.js';
 
 export default class Card {
     constructor(name, path) {
@@ -93,10 +65,3 @@ export default class Card {
       this._element.remove();
     }
 }
-
-cardList.forEach((item) => {
-    const card = new Card(item.name, item.path);
-    const cardElement = card.generateCard();
-
-    cardsContainer.append(cardElement);
-});

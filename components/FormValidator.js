@@ -1,6 +1,4 @@
-const formList = [...document.querySelectorAll(".popup__form")];
-
-class FormValidator {
+export default class FormValidator {
     constructor(data, formElement) {
         this._inputSelector = data.inputSelector;
         this._inputErrorClass = data.inputErrorClass;
@@ -68,15 +66,3 @@ class FormValidator {
         this._setEventListeners();
     }
 }
-
-const formSelectors = {
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__save-button',
-    inactiveButtonClass: 'popup__save-button_inactive',
-    inputErrorClass: 'popup__input_error',
-    errorClass: 'popup__input_error-message_active'
-}
-
-formList.forEach((item) => {
-    const formElement = new FormValidator(formSelectors, item);
-})
