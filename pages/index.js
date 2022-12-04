@@ -1,8 +1,7 @@
 import { 
     items, 
     formList,
-    formSelectors,
-    cardsContainer
+    formSelectors
 } from '../utils/constants.js';
 import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
