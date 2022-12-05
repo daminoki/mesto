@@ -35,10 +35,13 @@ export const formSelectors = {
     inputErrorClass: 'popup__input_error',
     errorClass: 'popup__input_error-message_active'
 }
-export const popupEditUserFormSelector = document.querySelector('.popup');
-export const editUserFormEditButton = document.querySelector('.profile-info__edit-button');
-export const editUserFormUserName = document.querySelector('.profile-info__user-name');
-export const editUserFormUserNameInput = popupEditUserFormSelector.querySelector('.popup__input_name');
-export const editUserFormUserDescription = document.querySelector('.profile-info__user-description');
-export const editUserFormUserDescriptionInput = popupEditUserFormSelector.querySelector('.popup__input_about');
-export const editUserFormSaveButton = popupEditUserFormSelector.querySelector('.popup__save-button');
+export const popupEditSelector = document.querySelector('.popup');
+export const popupEditButton = document.querySelector('.profile-info__edit-button');
+export const popupEditUserName = document.querySelector('.profile-info__user-name');
+export const popupEditUserNameInput = popupEditSelector.querySelector('.popup__input_name');
+export const popupEditUserDescription = document.querySelector('.profile-info__user-description');
+export const popupEditUserDescriptionInput = popupEditSelector.querySelector('.popup__input_about');
+export const popupEditSubmitButton = popupEditSelector.querySelector('.popup__save-button');
+export const popupAddCardSelector = document.querySelector('.card-popup');
+
+export const popupAddCardButton = document.querySelector('.profile-info__add-button');
