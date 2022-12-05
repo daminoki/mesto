@@ -15,18 +15,22 @@ import FormValidator from '../components/FormValidator.js';
 import Section from '../components/Section.js';
 import PopupWithForm from "../components/PopupWithForm.js";
 
-const cardList = new Section({ items, 
-renderer: (item) => {
-    const card = new Card(item.name, item.path);
-    const cardElement = card.generateCard();
-    cardList.addItem(cardElement);
-}
-}, '.cards');
+const cardList = new Section(
+    {
+        items,
+        renderer: (item) => {
+            const card = new Card(item.name, item.path);
+            const cardElement = card.generateCard();
+            cardList.addItem(cardElement);
+        }
+    },
+    '.cards'
+);
 
 cardList.renderItems();
 
 formList.forEach((item) => {
-    const formElement = new FormValidator(formSelectors, item);
+    new FormValidator(formSelectors, item);
 });
 
 function handleEditUserFormSubmit({ userName, userAbout }) {
