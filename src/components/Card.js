@@ -1,10 +1,11 @@
 import { cardImgPopup } from '../utils/constants.js';
 
 export default class Card {
-    constructor(name, path) {
+    constructor(name, path, handleCardClick) {
         this._name = name;
         this._path = path;
         this._element = null;
+        this.handleCardClick = handleCardClick;
     }
 
     _getElement() {

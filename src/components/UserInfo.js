@@ -7,7 +7,7 @@ export default class UserInfo {
     getUserInfo() {
         this._userData = {
             name: this._userName.textContent,
-            description: this._userDescription.textContent;
+            description: this._userDescription.textContent,
         }
         return this._userData();
     }

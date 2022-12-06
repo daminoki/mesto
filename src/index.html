@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
 
     <title>Mesto</title>
 </head>
@@ -16,28 +15,28 @@
 <body>
     <div class="container">
         <header class="header">
-            <img class="header__logo" src="./images/icons/logo.svg" alt="logo">
+            <img class="header__logo" src="<%=require('./images/icons/logo.svg')%>" alt="logo">
         </header>
 
         <section class="profile-info">
             <div class="profile-info__wrapper">
-                <img class="profile-info__img" src="./images/img/avatar.jpg" alt="avatar">
+                <img class="profile-info__img" src="<%=require('./images/img/avatar.jpg')%>" alt="avatar">
                 <div class="profile-info__description-wrapper">
                     <div class="profile-info__content-wrapper">
                         <h3 class="profile-info__user-name">Жак-Ив Кусто</h3>
-                        <button class="profile-info__edit-button"><img src="./images/icons/edit.svg"
+                        <button class="profile-info__edit-button"><img src="<%=require('./images/icons/edit.svg')%>"
                                 alt="edit-button"></button>
                     </div>
                     <p class="profile-info__user-description">Исследователь океана</p>
                 </div>
             </div>
-            <button class="profile-info__add-button"><img src="./images/icons/add-button.png" alt="add-button"></button>
+            <button class="profile-info__add-button"><img src="<%=require('./images/icons/add-button.png')%>" alt="add-button"></button>
         </section>
 
         <section class="cards">
             <template class="card-template">
                 <div class="cards__item">
-                    <img class="cards__img" src="#" alt="#">
+                    <img class="cards__img" src="" alt="#">
                     <div class="cards__description">
                         <h3 class="cards__name"></h3>
                         <button class="cards__like"></button>
@@ -119,6 +118,6 @@
         </div>
     </div>
 
-    <script src="./pages/index.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>

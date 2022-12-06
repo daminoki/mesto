@@ -1,3 +1,4 @@
+import './styles/style.css';
 import {
     items,
     formList,
@@ -9,11 +10,11 @@ import {
     popupAddCardSelector,
     popupAddCardButton,
     cardsContainer
-} from '../utils/constants.js';
-import Card from '../components/Card.js';
-import FormValidator from '../components/FormValidator.js';
-import Section from '../components/Section.js';
-import PopupWithForm from "../components/PopupWithForm.js";
+} from './utils/constants.js';
+import Card from './components/Card.js';
+import FormValidator from './components/FormValidator.js';
+import Section from './components/Section.js';
+import PopupWithForm from "./components/PopupWithForm.js";
 
 const cardList = new Section(
     {
@@ -56,5 +57,3 @@ popupAddCardButton.addEventListener("click", () => {
     popupAddCard.openPopup();
 })
 popupAddCard.setEventListeners();
-
-

@@ -1,27 +1,27 @@
 export const items = [
     {
-      name: 'Колумбия',
-      path: './images/img/flowers.jpg'
+      name: 'Пикник',
+      path: "https://images.unsplash.com/photo-1657299143363-621ba0a1e6ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1416&q=80"
     },
     {
-      name: 'Арканзас',
-      path: './images/img/forest.jpg'
+      name: 'Горы',
+      path: 'https://images.unsplash.com/photo-1669985390012-f369147f7790?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
     },
     {
-      name: 'Кабардино-Балкария',
-      path: './images/img/sea.jpg'
+      name: 'Домашняя кошка',
+      path: 'https://images.unsplash.com/photo-1668062284724-4c71542971f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
     },
     {
-      name: 'Турция',
-      path: './images/img/cat.jpg'
+      name: 'Дикий медведь',
+      path: 'https://images.unsplash.com/photo-1670140274562-2496ccaa5271?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
     },
     {
-      name: 'Швейцария',
-      path: './images/img/switzerland.jpg'
+      name: 'Торт',
+      path: 'https://images.unsplash.com/photo-1669926504091-2735b6cb51a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
     },
     {
-      name: 'Казань',
-      path: './images/img/kazan.jpg'
+      name: 'Австрия',
+      path: 'https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80'
     }
 ];
 
